@@ -62,19 +62,19 @@ const team = [
     }
 ]
 
-const arrayTeamDom = document.getElementById('array-team');
+// const arrayTeamDom = document.getElementById('array-team');
 
-for(let i = 0; i < team.length; i++){
+// for(let i = 0; i < team.length; i++){
 
-  const currentMember = team[i];
+//   const currentMember = team[i];
 
-    for(let key in currentMember){
+//     for(let key in currentMember){
 
-      console.log(key + ': ' + currentMember[key]);
-      arrayTeamDom.innerHTML += key + ': ' + currentMember[key];
-    }
+//       console.log(key + ': ' + currentMember[key]);
+//       arrayTeamDom.innerHTML += key + ': ' + currentMember[key];
+//     }
 
-}
+// }
 
 const memberContainerDom = document.getElementById('member-container');
 
@@ -84,26 +84,14 @@ createNewList();
 
 //FUNCTION
 
-function createNewList(){
+function createNewList(indice){
 
   const list = document.createElement('ul');
-  memberContainerDom.append(list);
-  
-  createListItems()
-}
-
-
-function createListItems(){
-
-  for(let i = 1; i <= 3; i++){
-
-    const listDom = document.getElementsByTagName('ul');
-    const listItem = document.createElement('li');
-    listItem.append(i);
-    listDom.append(listItem);
-  }
+  const listItem = document.createElement('i');
   
 }
+
+
 
 
 //let nomeDom =  document.getElementsByClassName('nome');
