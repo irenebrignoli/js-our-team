@@ -94,6 +94,7 @@ function createNewList(indice){
 
   listItem = document.createElement('li');
   listItem.classList.add('item');
+  listItem.classList.add('name');
   listItem.append(team[indice].nome);
   list.append(listItem);
 

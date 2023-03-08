@@ -31,8 +31,17 @@ main{
 }
 
 .card .item{
-  border-bottom: 1px solid #bdbdbd;
   padding: 10px;
+}
+
+.card .name{
+  font-size: 22px;
+  color:#424242;
+  font-weight: bold;
+}
+
+.card .item:nth-child(2) {
+  border-bottom: 1px solid #bdbdbd;
 }
 
 .card img{
