@@ -64,8 +64,15 @@ const team = [
 
 
 const memberContainerDom = document.getElementById('member-container');
+const cardsContainerDom = document.getElementById('member-cards');
 
-createNewList(0);
+
+for(let i = 0; i < team.length; i++){
+
+  createNewList(i);
+}
+
+
 
 
 
@@ -74,40 +81,25 @@ createNewList(0);
 function createNewList(indice){
 
   const list = document.createElement('ul');
+  list.classList.add('card');
   let listItem;
 
   listItem = document.createElement('li');
+  listItem.classList.add('item');
+  listItem.append(team[indice].foto);
+  list.append(listItem);
+
+  listItem = document.createElement('li');
+  listItem.classList.add('item');
   listItem.append(team[indice].nome);
   list.append(listItem);
 
   listItem = document.createElement('li');
+  listItem.classList.add('item');
   listItem.append(team[indice].ruolo);
   list.append(listItem);
 
-  listItem = document.createElement('li');
-  listItem.append(team[indice].foto);
-  list.append(listItem);
-
-  memberContainerDom.append(list);
+  cardsContainerDom.append(list);
 }
 
 
-
-
-
-
-
-
-// const arrayTeamDom = document.getElementById('array-team');
-
-// for(let i = 0; i < team.length; i++){
-
-//   const currentMember = team[i];
-
-//     for(let key in currentMember){
-
-//       console.log(key + ': ' + currentMember[key]);
-//       arrayTeamDom.innerHTML += key + ': ' + currentMember[key];
-//     }
-
-// }

@@ -18,6 +18,7 @@ main{
 #member-cards{
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
 .card{
@@ -31,5 +32,5 @@ main{
 
 .card .item{
   border-bottom: 1px solid #bdbdbd;
-  padding: 5px;
+  padding: 10px;
 }
