@@ -47,7 +47,7 @@ const team = [
       nome: 'Angela Lopez',
       ruolo: 'Social Media Manager',
       foto: 'angela-lopez-social-media-manager.jpg'
-    }
+    },
     {
       nome: 'Scott Estrada',
       ruolo: 'Developer',
@@ -58,6 +58,16 @@ const team = [
       ruolo: 'Graphic Designer',
       foto: 'barbara-ramos-graphic-designer.jpg'
     }
-
-
 ]
+
+
+for(let i = 0; i < team.length; i++){
+
+  const currentMember = team[i];
+
+    for(let key in currentMember){
+
+      console.log(key + ': ' + currentMember[key]);
+    }
+
+}
