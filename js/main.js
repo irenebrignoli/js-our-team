@@ -62,6 +62,42 @@ const team = [
     }
 ]
 
+
+const memberContainerDom = document.getElementById('member-container');
+
+createNewList(0);
+
+
+
+//FUNCTION
+
+function createNewList(indice){
+
+  const list = document.createElement('ul');
+  let listItem;
+
+  listItem = document.createElement('li');
+  listItem.append(team[indice].nome);
+  list.append(listItem);
+
+  listItem = document.createElement('li');
+  listItem.append(team[indice].ruolo);
+  list.append(listItem);
+
+  listItem = document.createElement('li');
+  listItem.append(team[indice].foto);
+  list.append(listItem);
+
+  memberContainerDom.append(list);
+}
+
+
+
+
+
+
+
+
 // const arrayTeamDom = document.getElementById('array-team');
 
 // for(let i = 0; i < team.length; i++){
@@ -75,25 +111,3 @@ const team = [
 //     }
 
 // }
-
-const memberContainerDom = document.getElementById('member-container');
-
-createNewList();
-
-
-
-//FUNCTION
-
-function createNewList(indice){
-
-  const list = document.createElement('ul');
-  const listItem = document.createElement('i');
-  
-}
-
-
-
-
-//let nomeDom =  document.getElementsByClassName('nome');
-
-//nomeDom.innerHTML = 'gigi';
