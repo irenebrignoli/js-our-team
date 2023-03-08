@@ -97,9 +97,10 @@ function createListItems(){
 
   for(let i = 1; i <= 3; i++){
 
+    const listDom = document.getElementsByTagName('ul');
     const listItem = document.createElement('li');
     listItem.append(i);
-    list.append(listItem);
+    listDom.append(listItem);
   }
   
 }
