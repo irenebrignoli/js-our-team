@@ -83,10 +83,13 @@ function createNewList(indice){
   const list = document.createElement('ul');
   list.classList.add('card');
   let listItem;
+  let img;
 
   listItem = document.createElement('li');
   listItem.classList.add('item');
-  listItem.append(team[indice].foto);
+  img = document.createElement('img');
+  img.setAttribute('src', `img/${team[indice].foto}`);
+  listItem.appendChild(img);
   list.append(listItem);
 
   listItem = document.createElement('li');
