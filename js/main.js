@@ -27,6 +27,8 @@ Scott Estrada	Developer	scott-estrada-developer.jpg
 Barbara Ramos	Graphic Designer	barbara-ramos-graphic-designer.jpg
 */
 
+
+
 const team = [
     {
       nome: 'Wayne Barnett',
@@ -60,6 +62,7 @@ const team = [
     }
 ]
 
+const arrayTeamDom = document.getElementById('array-team');
 
 for(let i = 0; i < team.length; i++){
 
@@ -68,6 +71,40 @@ for(let i = 0; i < team.length; i++){
     for(let key in currentMember){
 
       console.log(key + ': ' + currentMember[key]);
+      arrayTeamDom.innerHTML += key + ': ' + currentMember[key];
     }
 
 }
+
+const memberContainerDom = document.getElementById('member-container');
+
+createNewList();
+
+
+
+//FUNCTION
+
+function createNewList(){
+
+  const list = document.createElement('ul');
+  memberContainerDom.append(list);
+  
+  createListItems()
+}
+
+
+function createListItems(){
+
+  for(let i = 1; i <= 3; i++){
+
+    const listItem = document.createElement('li');
+    listItem.append(i);
+    list.append(listItem);
+  }
+  
+}
+
+
+//let nomeDom =  document.getElementsByClassName('nome');
+
+//nomeDom.innerHTML = 'gigi';
